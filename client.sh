@@ -5,6 +5,7 @@ sudo apt update
 #cd first_react_app
 sudo npm i
 sudo npm install serve -g
+sudo rm -rf /usr/lib/node_modules/pm2
 sudo npm install pm2 -g
 pm2 stop frontend
 pm2 delete frontend
