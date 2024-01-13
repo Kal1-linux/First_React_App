@@ -12,6 +12,7 @@ npm run build
 #pm2 delete frontend
 #pm2 start "serve -s build" --name "frontend"
 pm2 start "serve -s build -l 5000" --name "frontend"
+pm2 save
 #pm2 logs
 
 
@@ -23,4 +24,4 @@ latest_pid=$(pm2 prettylist | grep -E '"name":"Api_v2".*?"pm_id":([0-9]+)' | sed
 # Stop and delete all processes except the most recently started one
 pm2 delete all
 pm2 resurrect $latest_pid
-pm2 save
+
