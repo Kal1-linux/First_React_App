@@ -11,5 +11,5 @@ pm2 stop frontend
 pm2 delete frontend
 npm run build
 #pm2 start "serve -s build" --name "frontend"
-pm2 start "serve -s build -l 5000" --name "Frontend"
+pm2 start "serve -s build -l 5000" --name "frontend"
 #pm2 logs
